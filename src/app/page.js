@@ -27,13 +27,14 @@ export default function HomePage() {
         />
 
         {/* Comment Example */}
-        {}
-        <Comment
-          userImagePath={comments.userImagePath}
-          username={comments.username}
-          commentText={comments.replyText}
-          likeNum={comments.likeNum}
-        />
+        {comments.map((comment) => (
+          <Comment
+            userImagePath={comment.userImagePath}
+            username={comment.username}
+            commentText={comment.replyText}
+            likeNum={comment.likeNum}
+          />
+        ))}
 
         {/* Reply Example */}
         <Reply />
